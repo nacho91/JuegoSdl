@@ -1,0 +1,37 @@
+# depslib dependency file v1.0
+1472409873 source:c:\users\ignacio\documents\testjuego\main.cpp
+	<game.h>
+
+1472409590 c:\users\ignacio\documents\testjuego\include\game.h
+	<SDL2/SDL.h>
+	<SDL2/SDL_image.h>
+	"TextureManager.h"
+	"Player.h"
+
+1472409920 source:c:\users\ignacio\documents\testjuego\src\game.cpp
+	"game.h"
+	<iostream>
+
+1472337327 c:\users\ignacio\documents\testjuego\include\texturemanager.h
+	<SDL2/SDL.h>
+	<SDL2/SDL_image.h>
+	<iostream>
+	<map>
+
+1472337327 source:c:\users\ignacio\documents\testjuego\src\texturemanager.cpp
+	"TextureManager.h"
+
+1472406928 source:c:\users\ignacio\documents\testjuego\src\gameobject.cpp
+	"GameObject.h"
+	"TextureManager.h"
+
+1472406537 c:\users\ignacio\documents\testjuego\include\gameobject.h
+	<SDL2/SDL.h>
+	<iostream>
+
+1472409982 source:c:\users\ignacio\documents\testjuego\src\player.cpp
+	"Player.h"
+
+1472406988 c:\users\ignacio\documents\testjuego\include\player.h
+	<GameObject.h>
+
