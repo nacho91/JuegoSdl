@@ -3,10 +3,11 @@
 
 #include <SDL2/SDL.h>
 #include <SDL2/SDL_image.h>
-#include "TextureManager.h"
+#include <TextureManager.h>
 #include "Player.h"
 #include "Enemy.h"
 #include <vector>
+#include <GameStateMachine.h>
 
 using namespace std;
 
@@ -50,6 +51,8 @@ class Game
         SDL_Rect destinationRectangle;
 
         int m_currentFrame;
+
+        GameStateMachine* gameStateMachine;
 };
 
 #endif // GAME_H

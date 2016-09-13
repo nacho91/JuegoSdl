@@ -4,6 +4,8 @@
 #include <GameObject.h>
 #include <Vector2D.h>
 
+using namespace std;
+
 class SDLGameObject : public GameObject
 {
     public:

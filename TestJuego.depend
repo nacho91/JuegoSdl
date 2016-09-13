@@ -2,6 +2,8 @@
 1473643660 source:c:\users\ignacio\documents\testjuego\main.cpp
 	<game.h>
 
+1473638904 
+
 1473646563 c:\users\ignacio\documents\testjuego\include\game.h
 	<SDL2/SDL.h>
 	<SDL2/SDL_image.h>
@@ -15,6 +17,8 @@
 	<iostream>
 	<InputHandler.h>
 
+1473646880 ler.h>
+
 1472337327 c:\users\ignacio\documents\testjuego\include\texturemanager.h
 	<SDL2/SDL.h>
 	<SDL2/SDL_image.h>
@@ -24,22 +28,32 @@
 1472337327 source:c:\users\ignacio\documents\testjuego\src\texturemanager.cpp
 	"TextureManager.h"
 
+1472337327 nager.h"
+
 1473633824 source:c:\users\ignacio\documents\testjuego\src\gameobject.cpp
 	"GameObject.h"
 	"TextureManager.h"
 	"Vector2D.h"
+
+1473633824 h"
 
 1473634255 c:\users\ignacio\documents\testjuego\include\gameobject.h
 	<SDL2/SDL.h>
 	<iostream>
 	"LoaderParams.h"
 
+1473634255 ams.h"
+
 1473648881 source:c:\users\ignacio\documents\testjuego\src\player.cpp
 	"Player.h"
 	"InputHandler.h"
 
+1473648881 ler.h"
+
 1473647675 c:\users\ignacio\documents\testjuego\include\player.h
 	<SDLGameObject.h>
+
+1473638489 ject.h>
 
 1473638740 source:c:\users\ignacio\documents\testjuego\src\enemy.cpp
 	"Enemy.h"
@@ -57,6 +71,8 @@
 	<GameObject.h>
 	<Vector2D.h>
 
+1473648353 h>
+
 1473643610 source:c:\users\ignacio\documents\testjuego\src\sdlgameobject.cpp
 	"SDLGameObject.h"
 	"TextureManager.h"
@@ -68,4 +84,95 @@
 
 1473648353 c:\users\ignacio\documents\testjuego\include\inputhandler.h
 	<SDL2/SDL.h>
+
+1473770914 source:/home/ignacio/Documentos/JuegoSdl/main.cpp
+	<game.h>
+
+1473799821 /home/ignacio/Documentos/JuegoSdl/include/game.h
+	<SDL2/SDL.h>
+	<SDL2/SDL_image.h>
+	<TextureManager.h>
+	"Player.h"
+	"Enemy.h"
+	<vector>
+	<GameStateMachine.h>
+
+1473771544 /home/ignacio/Documentos/JuegoSdl/include/TextureManager.h
+	<SDL2/SDL.h>
+	<SDL2/SDL_image.h>
+	<iostream>
+	<map>
+
+1473770914 /home/ignacio/Documentos/JuegoSdl/include/Player.h
+	<SDLGameObject.h>
+
+1473771729 /home/ignacio/Documentos/JuegoSdl/include/SDLGameObject.h
+	<GameObject.h>
+	<Vector2D.h>
+
+1473770914 /home/ignacio/Documentos/JuegoSdl/include/GameObject.h
+	<SDL2/SDL.h>
+	<iostream>
+	"LoaderParams.h"
+
+1473770914 /home/ignacio/Documentos/JuegoSdl/include/LoaderParams.h
+	<iostream>
+
+1473770914 /home/ignacio/Documentos/JuegoSdl/include/Vector2D.h
+	<math.h>
+
+1473770914 /home/ignacio/Documentos/JuegoSdl/include/Enemy.h
+	<SDLGameObject.h>
+
+1473799808 source:/home/ignacio/Documentos/JuegoSdl/src/game.cpp
+	<game.h>
+	<iostream>
+	<InputHandler.h>
+	<MenuState.h>
+	<PlayState.h>
+
+1473770914 /home/ignacio/Documentos/JuegoSdl/include/InputHandler.h
+	<SDL2/SDL.h>
+
+1473799808 source:/home/ignacio/Documentos/JuegoSdl/src/Player.cpp
+	"Player.h"
+	"InputHandler.h"
+
+1472669410 source:/home/ignacio/Documentos/JuegoSdl/src/TextureManager.cpp
+	"TextureManager.h"
+
+1473770914 source:/home/ignacio/Documentos/JuegoSdl/src/Enemy.cpp
+	"Enemy.h"
+
+1473770914 source:/home/ignacio/Documentos/JuegoSdl/src/SDLGameObject.cpp
+	"SDLGameObject.h"
+	"TextureManager.h"
+	"game.h"
+
+1473770914 source:/home/ignacio/Documentos/JuegoSdl/src/InputHandler.cpp
+	"InputHandler.h"
+	<game.h>
+
+1473800204 source:/home/ignacio/Documentos/JuegoSdl/src/MenuState.cpp
+	"MenuState.h"
+	<iostream>
+
+1473799930 /home/ignacio/Documentos/JuegoSdl/include/MenuState.h
+	<GameState.h>
+
+1473800010 /home/ignacio/Documentos/JuegoSdl/include/GameState.h
+	<iostream>
+
+1473800204 source:/home/ignacio/Documentos/JuegoSdl/src/PlayState.cpp
+	"PlayState.h"
+
+1473800098 /home/ignacio/Documentos/JuegoSdl/include/PlayState.h
+	<GameState.h>
+
+1473800487 /home/ignacio/Documentos/JuegoSdl/include/GameStateMachine.h
+	"GameState.h"
+	"vector"
+
+1473800487 source:/home/ignacio/Documentos/JuegoSdl/src/GameStateMachine.cpp
+	"GameStateMachine.h"
 

@@ -1,6 +1,8 @@
-#include "game.h"
+#include <game.h>
 #include <iostream>
 #include <InputHandler.h>
+#include <MenuState.h>
+#include <PlayState.h>
 
 using namespace std;
 
@@ -58,6 +60,9 @@ bool Game::init(const char* title, int xpos, int ypos, int height, int width, in
     player->load(300, 300, 128, 82, "animate");
     enemy->load(0, 0, 128, 82, "animate");*/
 
+    gameStateMachine = new GameStateMachine();
+    gameStateMachine->changeState(new MenuState());
+
     m_gameObjects.push_back(new Player(new LoaderParams(100, 100, 128, 82,"animate")));
     m_gameObjects.push_back(new Enemy(new LoaderParams(300, 300, 128, 82,"animate")));
 
@@ -67,6 +72,10 @@ bool Game::init(const char* title, int xpos, int ypos, int height, int width, in
 void Game::handleEvents(){
     //InputHandler::Instance()->update();
     InputHandler::Instance()->update();
+
+    if(InputHandler::Instance()->isKeyDown(SDL_SCANCODE_RETURN)){
+        gameStateMachine->changeState(new PlayState());
+    }
 }
 
 void Game::quit(){
@@ -75,9 +84,10 @@ void Game::quit(){
 
 void Game::update(){
 
-    for(std::vector<GameObject*>::size_type i = 0; i != m_gameObjects.size(); i++){
+    gameStateMachine->update();
+    /*for(std::vector<GameObject*>::size_type i = 0; i != m_gameObjects.size(); i++){
         m_gameObjects[i]->update();
-    }
+    }*/
 
     m_currentFrame = int((SDL_GetTicks() / 100) % 6);
 }
@@ -86,9 +96,10 @@ void Game::render(){
 
     SDL_RenderClear(renderer);
 
-    for(std::vector<GameObject*>::size_type i = 0; i != m_gameObjects.size(); i++){
+    /*for(std::vector<GameObject*>::size_type i = 0; i != m_gameObjects.size(); i++){
         m_gameObjects[i]->draw();
-    }
+    }*/
+    gameStateMachine->render();
 
     SDL_RenderPresent(renderer);
 }
