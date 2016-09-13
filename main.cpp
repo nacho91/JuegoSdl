@@ -1,29 +1,35 @@
 //Using SDL and standard IO
 #include <game.h>
-
 //Screen dimension constants
 const int SCREEN_WIDTH = 640;
 const int SCREEN_HEIGHT = 480;
 
-Game* game = 0;
+const int FPS = 2;
+const int DELAY_TIME = 1000.0f / FPS;
 
 int main( int argc, char* args[] )
 {
-    game = new Game();
+    Uint32 frameStart, frameTime;
 
-    if(!game->init("Juego", 150, 150, SCREEN_HEIGHT, SCREEN_WIDTH, 0)){
+    if(!Game::Instance()->init("Juego", 150, 150, SCREEN_HEIGHT, SCREEN_WIDTH, 0)){
         return -1;
     }
 
-    while(game->running()){
-        game->handleEvents();
-        game->update();
-        game->render();
+    while(Game::Instance()->running()){
+        frameStart = SDL_GetTicks();
 
-        SDL_Delay(10);
+        Game::Instance()->handleEvents();
+        Game::Instance()->update();
+        Game::Instance()->render();
+
+        frameTime = SDL_GetTicks() - frameStart;
+
+        if(frameStart < DELAY_TIME){
+            SDL_Delay((int)(DELAY_TIME - frameTime));
+        }
     }
 
-    game->clean();
+    Game::Instance()->clean();
 
     return 0;
 }

@@ -1,16 +1,19 @@
 # depslib dependency file v1.0
-1472409873 source:c:\users\ignacio\documents\testjuego\main.cpp
+1473643660 source:c:\users\ignacio\documents\testjuego\main.cpp
 	<game.h>
 
-1472409590 c:\users\ignacio\documents\testjuego\include\game.h
+1473646563 c:\users\ignacio\documents\testjuego\include\game.h
 	<SDL2/SDL.h>
 	<SDL2/SDL_image.h>
 	"TextureManager.h"
 	"Player.h"
+	"Enemy.h"
+	<vector>
 
-1472409920 source:c:\users\ignacio\documents\testjuego\src\game.cpp
+1473646880 source:c:\users\ignacio\documents\testjuego\src\game.cpp
 	"game.h"
 	<iostream>
+	<InputHandler.h>
 
 1472337327 c:\users\ignacio\documents\testjuego\include\texturemanager.h
 	<SDL2/SDL.h>
@@ -21,17 +24,48 @@
 1472337327 source:c:\users\ignacio\documents\testjuego\src\texturemanager.cpp
 	"TextureManager.h"
 
-1472406928 source:c:\users\ignacio\documents\testjuego\src\gameobject.cpp
+1473633824 source:c:\users\ignacio\documents\testjuego\src\gameobject.cpp
 	"GameObject.h"
 	"TextureManager.h"
+	"Vector2D.h"
 
-1472406537 c:\users\ignacio\documents\testjuego\include\gameobject.h
+1473634255 c:\users\ignacio\documents\testjuego\include\gameobject.h
 	<SDL2/SDL.h>
 	<iostream>
+	"LoaderParams.h"
 
-1472409982 source:c:\users\ignacio\documents\testjuego\src\player.cpp
+1473648881 source:c:\users\ignacio\documents\testjuego\src\player.cpp
 	"Player.h"
+	"InputHandler.h"
 
-1472406988 c:\users\ignacio\documents\testjuego\include\player.h
+1473647675 c:\users\ignacio\documents\testjuego\include\player.h
+	<SDLGameObject.h>
+
+1473638740 source:c:\users\ignacio\documents\testjuego\src\enemy.cpp
+	"Enemy.h"
+
+1473638489 c:\users\ignacio\documents\testjuego\include\enemy.h
+	<SDLGameObject.h>
+
+1473642168 c:\users\ignacio\documents\testjuego\include\vector2d.h
+	<math.h>
+
+1473638904 c:\users\ignacio\documents\testjuego\include\loaderparams.h
+	<iostream>
+
+1473642663 c:\users\ignacio\documents\testjuego\include\sdlgameobject.h
 	<GameObject.h>
+	<Vector2D.h>
+
+1473643610 source:c:\users\ignacio\documents\testjuego\src\sdlgameobject.cpp
+	"SDLGameObject.h"
+	"TextureManager.h"
+	"game.h"
+
+1473648353 source:c:\users\ignacio\documents\testjuego\src\inputhandler.cpp
+	"InputHandler.h"
+	<game.h>
+
+1473648353 c:\users\ignacio\documents\testjuego\include\inputhandler.h
+	<SDL2/SDL.h>
 

@@ -1,23 +1,46 @@
 #include "Player.h"
+#include "InputHandler.h"
 
-Player::Player()
+Player::Player(const LoaderParams* params) : SDLGameObject(params)
 {
     //ctor
 }
 
-Player::~Player()
-{
-    //dtor
-}
-
-void Player::load(int x, int y, int width, int height, std::string textureID){
-    GameObject::load(x, y, width, height, textureID);
-}
-
-void Player::draw(SDL_Renderer* renderer){
-    GameObject::draw(renderer);
+void Player::draw(){
+    SDLGameObject::draw();
 }
 
 void Player::update(){
-    x -= 1;
+
+     velocity.setX(0);
+    velocity.setY(0);
+
+    handleInput();
+
+    currentFrame = int(((SDL_GetTicks() / 100) % 6));
+
+
+    SDLGameObject::update();
+}
+
+void Player::handleInput(){
+    if(InputHandler::Instance()->isKeyDown(SDL_SCANCODE_RIGHT))
+{
+ position.setX(position.getX() + 1);
+}
+if(InputHandler::Instance()->isKeyDown(SDL_SCANCODE_LEFT))
+{
+ position.setX(position.getX() - 1);
+}
+if(InputHandler::Instance()->isKeyDown(SDL_SCANCODE_UP))
+{
+ position.setY(position.getY() - 1);
+}
+if(InputHandler::Instance()->isKeyDown(SDL_SCANCODE_DOWN))
+{
+ position.setY(position.getY() + 1);
+}
+}
+
+void Player::clean(){
 }
