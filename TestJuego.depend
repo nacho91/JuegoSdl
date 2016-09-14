@@ -1,21 +1,27 @@
 # depslib dependency file v1.0
-1473643660 source:c:\users\ignacio\documents\testjuego\main.cpp
+1473816804 source:c:\users\ignacio\documents\testjuego\main.cpp
 	<game.h>
+	<vector>
+	<SDL2/SDL.h>
 
 1473638904 
 
-1473646563 c:\users\ignacio\documents\testjuego\include\game.h
+1473820197 c:\users\ignacio\documents\testjuego\include\game.h
 	<SDL2/SDL.h>
 	<SDL2/SDL_image.h>
-	"TextureManager.h"
+	<TextureManager.h>
 	"Player.h"
 	"Enemy.h"
 	<vector>
+	<GameStateMachine.h>
 
-1473646880 source:c:\users\ignacio\documents\testjuego\src\game.cpp
-	"game.h"
+1473819679 source:c:\users\ignacio\documents\testjuego\src\game.cpp
+	<game.h>
 	<iostream>
 	<InputHandler.h>
+	<MenuState.h>
+	<PlayState.h>
+	<PauseState.h>
 
 1473646880 ler.h>
 
@@ -44,7 +50,7 @@
 
 1473634255 ams.h"
 
-1473648881 source:c:\users\ignacio\documents\testjuego\src\player.cpp
+1473809954 source:c:\users\ignacio\documents\testjuego\src\player.cpp
 	"Player.h"
 	"InputHandler.h"
 
@@ -67,7 +73,7 @@
 1473638904 c:\users\ignacio\documents\testjuego\include\loaderparams.h
 	<iostream>
 
-1473642663 c:\users\ignacio\documents\testjuego\include\sdlgameobject.h
+1473802390 c:\users\ignacio\documents\testjuego\include\sdlgameobject.h
 	<GameObject.h>
 	<Vector2D.h>
 
@@ -175,4 +181,75 @@
 
 1473800487 source:/home/ignacio/Documentos/JuegoSdl/src/GameStateMachine.cpp
 	"GameStateMachine.h"
+
+1473802390 c:\users\ignacio\documents\testjuego\include\gamestatemachine.h
+	"GameState.h"
+	"vector"
+
+1473802390 c:\users\ignacio\documents\testjuego\include\gamestate.h
+	<iostream>
+
+1473803603 c:\users\ignacio\documents\testjuego\include\menustate.h
+	<GameState.h>
+	<vector>
+	<GameObject.h>
+
+1473809811 c:\users\ignacio\documents\testjuego\include\playstate.h
+	<GameState.h>
+	<GameObject.h>
+	<vector>
+
+1473802390 source:c:\users\ignacio\documents\testjuego\src\gamestate.cpp
+	"GameState.h"
+
+1473819679 source:c:\users\ignacio\documents\testjuego\src\gamestatemachine.cpp
+	"GameStateMachine.h"
+
+1473806210 source:c:\users\ignacio\documents\testjuego\src\menustate.cpp
+	"MenuState.h"
+	<iostream>
+	<TextureManager.h>
+	<game.h>
+	<MenuButton.h>
+
+1473820197 source:c:\users\ignacio\documents\testjuego\src\playstate.cpp
+	"PlayState.h"
+	<TextureManager.h>
+	<game.h>
+	<InputHandler.h>
+
+1473806169 source:c:\users\ignacio\documents\testjuego\src\menubutton.cpp
+	"MenuButton.h"
+
+1473806095 c:\users\ignacio\documents\testjuego\include\menubutton.h
+	<SDLGameObject.h>
+
+1473812659 c:\users\ignacio\documents\testjuego\include\pausestate.h
+	<GameState.h>
+	<GameObject.h>
+	<vector>
+
+1473820197 source:c:\users\ignacio\documents\testjuego\src\pausestate.cpp
+	"PauseState.h"
+	<game.h>
+	<iostream>
+	<InputHandler.h>
+
+1473820428 source:c:\users\ignacio\documents\testjuego\src\gameoverstate.cpp
+	"GameOverState.h"
+	<iostream>
+	<TextureManager.h>
+	<game.h>
+	<AnimatedGraphic.h>
+
+1473820428 c:\users\ignacio\documents\testjuego\include\gameoverstate.h
+	<GameState.h>
+	<GameObject.h>
+	<vector>
+
+1473819406 source:c:\users\ignacio\documents\testjuego\src\animatedgraphic.cpp
+	"AnimatedGraphic.h"
+
+1473819356 c:\users\ignacio\documents\testjuego\include\animatedgraphic.h
+	<SDLGameObject.h>
 

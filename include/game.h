@@ -24,6 +24,9 @@ class Game
         void update();
         void handleEvents();
         void clean();
+        void pause();
+        void resume();
+        void over();
         void quit();
         bool running(){ return is_running; }
         SDL_Renderer* getRenderer() const { return renderer; }

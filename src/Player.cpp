@@ -23,22 +23,21 @@ void Player::update(){
 }
 
 void Player::handleInput(){
-    if(InputHandler::Instance()->isKeyDown(SDL_SCANCODE_RIGHT))
-{
- position.setX(position.getX() + 1);
-}
-if(InputHandler::Instance()->isKeyDown(SDL_SCANCODE_LEFT))
-{
- position.setX(position.getX() - 1);
-}
-if(InputHandler::Instance()->isKeyDown(SDL_SCANCODE_UP))
-{
- position.setY(position.getY() - 1);
-}
-if(InputHandler::Instance()->isKeyDown(SDL_SCANCODE_DOWN))
-{
- position.setY(position.getY() + 1);
-}
+    if(InputHandler::Instance()->isKeyDown(SDL_SCANCODE_RIGHT)){
+        position.setX(position.getX() + 0.1f);
+    }
+
+    if(InputHandler::Instance()->isKeyDown(SDL_SCANCODE_LEFT)){
+        position.setX(position.getX() - 0.1f);
+    }
+
+    if(InputHandler::Instance()->isKeyDown(SDL_SCANCODE_UP)){
+        position.setY(position.getY() - 0.1f);
+    }
+
+    if(InputHandler::Instance()->isKeyDown(SDL_SCANCODE_DOWN)){
+        position.setY(position.getY() + 0.1f);
+    }
 }
 
 void Player::clean(){

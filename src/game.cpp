@@ -3,6 +3,8 @@
 #include <InputHandler.h>
 #include <MenuState.h>
 #include <PlayState.h>
+#include <PauseState.h>
+#include <GameOverState.h>
 
 using namespace std;
 
@@ -25,7 +27,7 @@ bool Game::init(const char* title, int xpos, int ypos, int height, int width, in
         if(window != 0){
             cout<<"Window create success\n";
 
-            renderer = SDL_CreateRenderer(window, -1, 0);
+            renderer = SDL_CreateRenderer(window, -1, SDL_RENDERER_ACCELERATED | SDL_RENDERER_TARGETTEXTURE);
 
             if(renderer != 0){
                 cout<<"Renderer create success\n";
@@ -69,6 +71,18 @@ bool Game::init(const char* title, int xpos, int ypos, int height, int width, in
     return true;
 }
 
+void Game::pause(){
+    gameStateMachine->pushState(new PauseState());
+}
+
+void Game::resume(){
+    gameStateMachine->popState();
+}
+
+void Game::over(){
+    gameStateMachine->pushState(new GameOverState());
+}
+
 void Game::handleEvents(){
     //InputHandler::Instance()->update();
     InputHandler::Instance()->update();
@@ -98,10 +112,13 @@ void Game::render(){
 
     /*for(std::vector<GameObject*>::size_type i = 0; i != m_gameObjects.size(); i++){
         m_gameObjects[i]->draw();
+
     }*/
+
     gameStateMachine->render();
 
     SDL_RenderPresent(renderer);
+
 }
 
 void Game::clean(){
